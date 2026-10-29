@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""PFS − PS1 for every run29 FLUXSTD coadd object, and for up to 10 shared pfsCalibrated visits.
+"""PFS synthetic magnitude minus Pan-STARRS 1 for FLUXSTD objects.
 
-Coadd magnitudes use the coadd spectrum. Calibrated magnitudes are the median
-across up to 10 visits, using every visit an object has when fewer than 10
-are available. Visit files are read with one worker process each.
+The difference is computed separately for the coadd spectrum and for up to 10
+shared pfsCalibrated visits, so the two can be compared with each other.
+Calibrated magnitudes are the median of the visits an object actually has.
+Visit files are read with one worker process each.
 
 The PDF has five pages: band differences, the g−y colour residual, then band
 differences against exposure time, median S/N, and mean PFI offset.
